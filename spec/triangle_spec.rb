@@ -1,41 +1,38 @@
 require './lib/triangle'
 
 RSpec.describe "Triangle" do
-  before(:each) do
-    @triangle = Triangle.new(3,4,5)
-  end
   it "exists" do
-    expect(@triangle).to be_an(Triangle)
-  end
-  it "can determine if a valid triangle is valid" do
-    expect(@triangle.valid_triangle?).to be(true)
-  end
-  it "can determine if an invalid triangle is invalid" do
-    triangle = Triangle.new(1, 1, 10)
-    expect(triangle.valid_triangle?).to be(false)
-  end
-  it "can determine if triangle is equilateral" do
-    triangle = Triangle.new(3, 3, 3)
-    expect(triangle.equilateral?).to be(true)
-  end
-  it "can determine if a triangle is not equilateral" do
-    triangle = Triangle.new(3, 2, 3)
-    expect(triangle.equilateral?).to be(false)
-  end
-  it "can determine if the triangle is isosceles" do
-    triangle = Triangle.new(3, 2, 3)
-    expect(triangle.isosceles?).to eq(true)
-  end
-  it "can determine if the triangle is not isosceles" do
-    triangle = Triangle.new(1, 2, 3)
-    expect(triangle.isosceles?).to eq(false)
-  end
-  it "can determine if the triangle is scalene" do
     triangle = Triangle.new(3, 4, 5)
-    expect(triangle.scalene?).to eq(true)
+    expect(triangle).to be_an(Triangle)
   end
-  it "can determine if the triangle is not scalene" do
-    triangle = Triangle.new(3, 3, 5)
-    expect(triangle.scalene?).to eq(false)
+
+  it "identifies an equilateral triangle" do
+    triangle = Triangle.new(3, 3, 3)
+    expect(triangle.triangle_type).to eq("You have an equilateral triangle")
+  end
+
+  it "identifies an isosceles triangle" do
+    triangle = Triangle.new(3, 3, 4)
+    expect(triangle.triangle_type).to eq("You have an isosceles triangle")
+  end
+
+  it "identifies a scalene triangle" do
+    triangle = Triangle.new(3, 4, 5)
+    expect(triangle.triangle_type).to eq("You have a scalene triangle")
+  end
+
+  it "returns invalid message for invalid triangle" do
+    triangle = Triangle.new(1, 1, 10)
+    expect(triangle.triangle_type).to eq("Not a valid triangle")
+  end
+
+  it "returns invalid message when side is zero" do
+    triangle = Triangle.new(0, 4, 5)
+    expect(triangle.triangle_type).to eq("Not a valid triangle")
+  end
+
+  it "returns invalid message when side is negative" do
+    triangle = Triangle.new(-3, 4, 5)
+    expect(triangle.triangle_type).to eq("Not a valid triangle")
   end
 end
