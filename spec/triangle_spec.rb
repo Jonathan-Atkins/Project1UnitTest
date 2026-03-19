@@ -30,4 +30,12 @@ RSpec.describe "Triangle" do
     triangle = Triangle.new(1, 2, 3)
     expect(triangle.isosceles?).to eq(false)
   end
+  it "can determine if the triangle is scalene" do
+    triangle = Triangle.new(3, 4, 5)
+    expect(triangle.scalene?).to eq(true)
+  end
+  it "can determine if the triangle is not scalene" do
+    triangle = Triangle.new(3, 3, 5)
+    expect(triangle.scalene?).to eq(false)
+  end
 end
