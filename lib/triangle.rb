@@ -1,8 +1,11 @@
 class Triangle
-  def initialize(side_a, side_b, side_c)
-    @side_a = side_a
-    @side_b = side_b
-    @side_c = side_c
+  def initialize(input: $stdin)
+    puts "Enter side A:"
+    @side_a = input.gets.chomp.to_i
+    puts "Enter side B:"
+    @side_b = input.gets.chomp.to_i
+    puts "Enter side C:"
+    @side_c = input.gets.chomp.to_i
   end
 
   def triangle_type

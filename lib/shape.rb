@@ -1,13 +1,20 @@
-# lib/shape.rb
 require "./lib/triangle"
 
 class Shape
-  def find_shape(angles, side_a = nil, side_b = nil, side_c = nil)
-    case angles
+  def initialize
+    puts "How many sides does your shape have?"
+    @angles = gets.chomp.to_i
+    find_shape
+  end
+
+  def find_shape
+    case @angles
     when 3
-      Triangle.new(side_a, side_b, side_c).triangle_type
+      puts Triangle.new.triangle_type
     else
-      "No shape exists with those angles"
+      puts "No shape exists with those angles"
     end
   end
 end
+
+Shape.new

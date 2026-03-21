@@ -1,4 +1,4 @@
-require './lib/shape'
+require "./lib/shape"
 
 RSpec.describe "Shape" do
   it "exists" do
