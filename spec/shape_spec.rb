@@ -1,6 +1,11 @@
 require "./lib/shape"
 
 RSpec.describe "Shape" do
+  def build_shape(a)
+    fake_input = String.IO.new("#{a}\n")
+    Shape.new(input: fake_input)
+  end
+
   it "exists" do
     shape = Shape.new
     expect(shape).to be_an(Shape)

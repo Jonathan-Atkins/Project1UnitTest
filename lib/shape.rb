@@ -1,9 +1,9 @@
 require "./lib/triangle"
 
 class Shape
-  def initialize
+  def initialize(input: $stdin)
     puts "How many sides does your shape have?"
-    @angles = gets.chomp.to_i
+    @angles = input.gets.chomp.to_i
     find_shape
   end
 
@@ -16,5 +16,3 @@ class Shape
     end
   end
 end
-
-Shape.new
