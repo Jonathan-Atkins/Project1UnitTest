@@ -7,11 +7,17 @@ class Circle
   def circle_size
     if valid_radius?
       diameter?
+      area?
     end
   end
 
   def diameter?
-    @radius * 2
+    diameter = @radius * 2
+    "Your diameter is #{diameter}"
+  end
+
+  def area?
+    (Math::PI * @radius**2).round(2)
   end
 
   private

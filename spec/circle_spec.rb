@@ -8,6 +8,9 @@ RSpec.describe "Circle" do
     expect(@circle).to be_a(Circle)
   end
   it "can determine the diameter of a circle" do
-    expect(@circle.diameter?).to eq(10)
+    expect(@circle.diameter?).to eq("Your diameter is 10")
+  end
+  it "can determine the area of a circle" do
+    expect(@circle.area?).to eq(78.54)
   end
 end
