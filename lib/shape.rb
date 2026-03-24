@@ -1,18 +1,18 @@
-require "./lib/triangle"
+require './lib/triangle'
 
 class Shape
   def initialize(input: $stdin)
+    @input = input
     puts "How many sides does your shape have?"
     @angles = input.gets.chomp.to_i
-    find_shape
   end
 
-  def find_shape
-    case @angles
+  def find_shape(angles = @angles)
+    case angles
     when 3
-      puts Triangle.new.triangle_type
+      Triangle.new(input: @input).triangle_type
     else
-      puts "No shape exists with those angles"
+      "No shape exists with those angles"
     end
   end
 end
