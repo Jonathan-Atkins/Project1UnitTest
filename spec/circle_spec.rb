@@ -1,13 +1,13 @@
-require './lib/circle'
+require "./lib/circle"
 
-describe Circle do
+RSpec.describe "Circle" do
+  before do
+    @circle = Circle.new(input: StringIO.new("5\n"))
+  end
   it "can be created" do
-    expect(Circle.new).to be_a(Circle)
+    expect(@circle).to be_a(Circle)
   end
-
-  it "returns the correct type message" do
-    circle = Circle.new
-    expect(circle.circle_type).to eq("You have a circle")
+  it "can determine the diameter of a circle" do
+    expect(@circle.diameter?).to eq(10)
   end
-  it "can determine if the radius is valid" do
 end

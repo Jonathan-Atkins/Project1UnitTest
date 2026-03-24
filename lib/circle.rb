@@ -5,7 +5,18 @@ class Circle
   end
 
   def circle_size
-    return false if radius_valid? 
-    "You have a circle"
+    if valid_radius?
+      diameter?
+    end
+  end
+
+  def diameter?
+    @radius * 2
+  end
+
+  private
+
+  def valid_radius?
+    false if @radius <= 0
   end
 end
