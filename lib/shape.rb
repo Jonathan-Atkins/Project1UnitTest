@@ -1,4 +1,6 @@
+
 require './lib/triangle'
+require './lib/circle'
 
 class Shape
   def initialize(input: $stdin)
@@ -11,6 +13,8 @@ class Shape
     case angles
     when 3
       Triangle.new(input: @input).triangle_type
+    when 0
+      Circle.new(input: @input).circle_type
     else
       "No shape exists with those angles"
     end
