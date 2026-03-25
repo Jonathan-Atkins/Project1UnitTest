@@ -18,7 +18,7 @@ class Shape
     when 0
       Circle.new(input: @input).circle_size
     else
-      "No shape exists with those angles"
+      "No shape exists with that amount of sides"
     end
   end
 end

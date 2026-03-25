@@ -1,42 +1,27 @@
-# Group Project,  Part 1
 
-# Project 1: Unit Testing
-*Revised: 3/15/26*
+# Shape Classifier Project
 
-## General Instructions
+This Ruby app interactively classifies geometric shapes based on user input. It determines if a shape is a triangle, rectangle, square, or circle, and identifies triangle types (equilateral, isosceles, scalene). It also handles invalid and edge-case inputs.
 
-**Introduction**
+## How to Run
 
-This assignment allows you to apply the concepts in this class in a working program. Java or Python or recommended, but you can do this in any language where you have experience.
+1. Make sure you have Ruby installed.
+2. In your terminal, navigate to the `Project1UnitTest` directory.
+3. Run the following command:
 
-**Group Work**
+   ruby runner.rb
 
-This is a *group collaboration assignment*. You will need to choose a group for this assignment. If you would like to work individually, you can do that too. If you work as a group, but all names on your assignment. Let me know your groups in Slack.
+Follow the prompts to enter the number of sides and any required dimensions.
 
-**Special Instructions for submitting in Git Hub.**
+## About This Assignment
 
-1. Submit your assignment in World Class including a text file with the link to the Git Hub Repo for the assignment. I will not look for your assignment unless I see this, and if I don't see this I will assign a zero since it will appear to me that the assignment was not turned in.
-2. Your assignments in your Git Hub Repo should be organized in Folders and Markdown files in your Git Hub Repo. For example, you might have a folder for "**Project1UnitTest**" and in that folder you will have a separate markdown file clearly labeled with the assignment name.
-3. If you want to simulate a real world experience, you can make a new branch for your assignment while you are working on it, but before you submit, merge it into the main branch. I'll only look at the main branch in this class, and I will assume that any branches are works in progress.
+This project fulfills the requirements for the unit testing assignment:
+- Accepts user input for shape sides and dimensions
+- Determines triangle validity and type
+- Handles invalid/rainy day cases (e.g., zero or negative sides)
+- Includes comprehensive automated unit tests (RSpec)
 
-## Part 1: Write a program in the language of your choice to determine "valid triangle" and "type of triangle" based on input of 3 sides
-
-- Using an IDE of your choice, write a program that accepts three values for the length of the sides of a triangle, and returns:
-  - Is the triangle valid?
-  - the type of triangle, e.g. scalene, isosceles, or equilateral. Be sure to read Chapter 1 of the text so that you are aware of the types of things to think about when making this program robust.
-
-## Part 2: Handling "Rainy Day Cases"
-
-Add code to handle "rainy day cases," e.g. the user enters a side that is zero. There are different ways to do this. You can handle errors with program logic or you can write custom exceptions.
-
-## Part 3: Write Unit Tests
-
-Write Unit Tests using the testing libraries for your language (e.g. Junit) to represent at least three of the test cases described in Chapter 1 of the text. For example:
-
-- Test for a valid triangle.
-- Test for scalene triangle
-- Test that accepts the sides of a scalene triangle in all possible orders
-- Test that accepts a zero length side
+See the `spec/` folder for test coverage.
 
 ## Deliverables
 

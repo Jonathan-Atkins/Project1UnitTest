@@ -54,12 +54,12 @@ RSpec.describe "Shape" do
   it "returns error for unsupported number of sides" do
     fake_input = StringIO.new("5\n")
     shape = Shape.new(input: fake_input)
-    expect(shape.find_shape(5)).to eq("No shape exists with those angles")
+    expect(shape.find_shape(5)).to eq("No shape exists with that amount of sides")
   end
 
   it "returns error for unsupported number of sides" do
     fake_input = StringIO.new("5\n")
     shape = Shape.new(input: fake_input)
-    expect(shape.find_shape(5)).to eq("No shape exists with those angles")
+    expect(shape.find_shape(5)).to eq("No shape exists with that amount of sides")
   end
 end
