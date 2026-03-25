@@ -16,7 +16,8 @@ class Circle
   end
 
   def area?
-    (Math::PI * @radius**2).round(2)
+    area = (Math::PI * @radius**2).round(2)
+    "Your area #{area}"
   end
 
   private
