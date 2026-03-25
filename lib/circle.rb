@@ -1,7 +1,6 @@
 class Circle
   def initialize(input: $stdin)
-    puts "What is the circles radius"
-    @radius = input.gets.chomp.to_i
+    @radius = input.gets("What is the circles radius").chomp.to_i
   end
 
   def circle_size
