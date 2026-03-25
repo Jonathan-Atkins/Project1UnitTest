@@ -6,6 +6,12 @@ RSpec.describe "Triangle" do
     Triangle.new(input: fake_input)
   end
 
+  it "returns 'Not a valid triangle' for invalid sides" do
+    fake_input = StringIO.new("0\n3\n4\n")
+    triangle = Triangle.new(input: fake_input)
+    expect(triangle.triangle_type).to eq("Not a valid triangle")
+  end
+
   it "exists" do
     expect(build_triangle(3, 4, 5)).to be_an(Triangle)
   end

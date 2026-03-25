@@ -1,6 +1,6 @@
-
-require './lib/triangle'
-require './lib/circle'
+require "./lib/triangle"
+require "./lib/circle"
+require "./lib/rectangle"
 
 class Shape
   def initialize(input: $stdin)
@@ -11,6 +11,8 @@ class Shape
 
   def find_shape(angles = @angles)
     case angles
+    when 4
+      Rectangle.new(input: @input).rectangle_type
     when 3
       Triangle.new(input: @input).triangle_type
     when 0
