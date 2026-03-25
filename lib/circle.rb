@@ -5,8 +5,7 @@ class Circle
 
   def circle_size
     if valid_radius?
-      diameter?
-      area?
+      [diameter?, area?]
     end
   end
 
@@ -23,6 +22,6 @@ class Circle
   private
 
   def valid_radius?
-    false if @radius <= 0
+    @radius > 0
   end
 end

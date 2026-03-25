@@ -31,7 +31,7 @@ RSpec.describe "Shape" do
     expect(build_isosceles.find_shape(3)).to eq("You have an isosceles triangle")
     expect(build_scalene.find_shape(3)).to eq("You have a scalene triangle")
   end
-  it "can determine if shape is a circle" do
-    expect(build_circle.find_shape(0)).to eq("You have a circle")
+  it "can determine if shape is a circle and returns Circle output" do
+    expect(build_circle.find_shape(0)).to eq(["Your diameter is 10", "Your area 78.54"])
   end
 end

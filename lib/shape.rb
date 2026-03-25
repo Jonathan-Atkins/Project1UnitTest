@@ -14,7 +14,7 @@ class Shape
     when 3
       Triangle.new(input: @input).triangle_type
     when 0
-      Circle.new(input: @input).circle_type
+      Circle.new(input: @input).circle_size
     else
       "No shape exists with those angles"
     end
